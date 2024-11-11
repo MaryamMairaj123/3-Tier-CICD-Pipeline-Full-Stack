@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: yelp-camp-secrets
+  name: mysecretname
 type: Opaque
 data:
   CLOUDINARY_CLOUD_NAME: ZG5qemFmc2V1Cg==
@@ -36,32 +36,32 @@ spec:
             - name: CLOUDINARY_CLOUD_NAME
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: CLOUDINARY_CLOUD_NAME
             - name: CLOUDINARY_KEY
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: CLOUDINARY_KEY
             - name: CLOUDINARY_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: CLOUDINARY_SECRET
             - name: MAPBOX_TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: MAPBOX_TOKEN
             - name: DB_URL
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: DB_URL
             - name: SECRET
               valueFrom:
                 secretKeyRef:
-                  name: yelp-camp-secrets
+                  name: mysecretname
                   key: SECRET
           livenessProbe:
             httpGet:
